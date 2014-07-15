@@ -7,7 +7,7 @@ generate in-place lexicographical permutations.
 package permute
 
 // Interface is identical to the standard "sort" package's Interface.
-type Interface interface{
+type Interface interface {
 	Len() int
 	Less(i, j int) bool
 	Swap(i, j int)
