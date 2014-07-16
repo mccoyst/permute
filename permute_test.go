@@ -10,12 +10,12 @@ func (n ints) Len() int           { return len(n) }
 func (n ints) Less(i, j int) bool { return n[i] < n[j] }
 func (n ints) Swap(i, j int)      { n[i], n[j] = n[j], n[i] }
 
-func ExampleNext() {
+func ExampleNextLex() {
 	n := ints{1, 2, 3}
 
 	for {
 		fmt.Println(n)
-		if !Next(n) {
+		if !NextLex(n) {
 			break
 		}
 	}

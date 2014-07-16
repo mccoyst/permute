@@ -1,8 +1,7 @@
 // © 2014 Steve McCoy. Licensed under the MIT license. See LICENSE for details.
 
 /*
-Package permute provides functions on instances of permute.Interface to
-generate in-place lexicographical permutations.
+Package permute provides functions to generate in-place permutations on arbitrary sequences.
 */
 package permute
 
@@ -13,8 +12,8 @@ type Interface interface {
 	Swap(i, j int)
 }
 
-// Next tries to generate the next permutation of s and returns true iff it succeeds.
-func Next(s Interface) bool {
+// NextLex tries to generate the next lexicographical permutation of s and returns true iff it succeeds.
+func NextLex(s Interface) bool {
 	k := s.Len() - 2
 	for ; k >= 0; k-- {
 		if s.Less(k, k+1) {
